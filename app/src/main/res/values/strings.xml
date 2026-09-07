@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Budget Battle</string>
+
+    <!-- Start Screen -->
+    <string name="title_start">💰 Budget Battle</string>
+    <string name="subtitle_start">Simulate your student budget. Face the consequences.</string>
+    <string name="label_income_source">📋 Income Source</string>
+    <string name="label_weekly_budget">💵 Weekly Budget</string>
+    <string name="income_parttime">💼  Part-time Job</string>
+    <string name="income_family">👨‍👩‍👧  Family Support</string>
+    <string name="income_centrelink">🏛️  Centrelink</string>
+    <string name="btn_start">🎮  START WEEK 1</string>
+    <string name="budget_min">$50</string>
+    <string name="budget_max">$500</string>
+
+    <!-- Weekly Decision Screen -->
+    <string name="label_scenario">📌 This Week\'s Scenario</string>
+    <string name="label_spend_question">💸 How much will you spend?</string>
+    <string name="spend_min">$0</string>
+    <string name="btn_confirm">✅  CONFIRM DECISION</string>
+
+    <!-- Result Screen -->
+    <string name="label_calculating">⚙️ Calculating your week…</string>
+    <string name="label_stress">🧠 Stress Level</string>
+    <string name="label_outcome">💡 Outcome</string>
+    <string name="btn_next_week">Next Week →</string>
+    <string name="btn_final_summary">🏁  See Final Summary</string>
+    <string name="btn_play_again">🔄  Play Again</string>
+</resources>

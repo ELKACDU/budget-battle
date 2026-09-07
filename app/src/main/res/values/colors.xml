@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launcher icon background (required by adaptive icon XML) -->
+    <color name="ic_launcher_background">#FFB800</color>
+
+    <!-- Background -->
+    <color name="bg_dark">#0F1117</color>
+    <color name="card_bg">#1C1E2B</color>
+    <color name="card_bg_alt">#252838</color>
+
+    <!-- Accent colours -->
+    <color name="accent_gold">#FFB800</color>
+    <color name="accent_purple">#8B6FCE</color>
+
+    <!-- Text -->
+    <color name="text_primary">#EAEAEA</color>
+    <color name="text_muted">#7A7D94</color>
+
+    <!-- Stress meter bands (also used for SeekBar feedback) -->
+    <color name="stress_low">#4CAF50</color>
+    <color name="stress_medium">#FFC107</color>
+    <color name="stress_high">#F44336</color>
+
+    <!-- Utility -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>
