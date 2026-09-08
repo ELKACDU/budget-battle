@@ -124,7 +124,9 @@ public class WeekLogic {
         return CompletableFuture.supplyAsync(() -> {
             try {
                 // Simulate processing delay - makes async behaviour visible in the UI
-                Thread.sleep(1200);
+                // Reduced from 1200ms after testing on a mid-range device — 900ms still
+            // reads as "calculating" without feeling sluggish on repeated weekly taps
+            Thread.sleep(900);
             } catch (InterruptedException ignored) {}
             return calculateStressChange(spendAmount, budget);
         });
