@@ -95,18 +95,18 @@ public class WeekLogic {
      * @param budget       Player's weekly budget
      * @return             Positive value = stress increases; negative = stress decreases
      */
-    public int calculateStressChange(int spendAmount, int budget) {
-    int overspend = spendAmount - budget;
-    if (overspend > 0) {
-        // Overspending raises stress proportionally to how far over budget
-        return overspend / 10;
+        public int calculateStressChange(int spendAmount, int budget) {
+        int overspend = spendAmount - budget;
+        if (overspend > 0) {
+            // Overspending raises stress proportionally to how far over budget
+            return overspend / 10;
+        }
+        // Staying under budget gives relief proportional to the buffer saved,
+        // capped at -5 so saving a huge amount doesn't dominate the stress score
+        int underspend = Math.abs(overspend);
+        return Math.max(-5, -(underspend / 20) - 1);
     }
-    // Staying under budget gives relief proportional to the buffer saved,
-    // capped at -5 so saving a huge amount doesn't dominate the stress score
-    int underspend = Math.abs(overspend);
-    return Math.max(-5, -(underspend / 20) - 1);
-}
-    }
+
 
     // -----------------------------------------------------------------------
     // Async version - used by ResultActivity
