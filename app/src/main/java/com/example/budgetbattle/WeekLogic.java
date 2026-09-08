@@ -96,9 +96,16 @@ public class WeekLogic {
      * @return             Positive value = stress increases; negative = stress decreases
      */
     public int calculateStressChange(int spendAmount, int budget) {
-        int overspend = spendAmount - budget;
-        // Overspending raises stress proportionally; staying under budget gives a small relief
-        return overspend > 0 ? overspend / 10 : -2;
+    int overspend = spendAmount - budget;
+    if (overspend > 0) {
+        // Overspending raises stress proportionally to how far over budget
+        return overspend / 10;
+    }
+    // Staying under budget gives relief proportional to the buffer saved,
+    // capped at -5 so saving a huge amount doesn't dominate the stress score
+    int underspend = Math.abs(overspend);
+    return Math.max(-5, -(underspend / 20) - 1);
+}
     }
 
     // -----------------------------------------------------------------------
