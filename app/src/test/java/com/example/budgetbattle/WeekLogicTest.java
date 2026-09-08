@@ -55,4 +55,12 @@ public class WeekLogicTest {
         int total = logic.calculateTotalSpend(items);
         assertEquals("Sum of 120 + 60 + 20 should equal 200", 200, total);
     }
+        /** Saving a large amount under budget should give more relief than saving a little, up to the cap. */
+    @Test
+    public void largerUnderspend_givesMoreRelief() {
+        WeekLogic logic = new WeekLogic();
+        int reliefSmall = logic.calculateStressChange(90, 100);  // $10 under
+        int reliefLarge = logic.calculateStressChange(20, 100);  // $80 under
+        assertTrue("Saving more should give more (or equal, if capped) relief", reliefLarge <= reliefSmall);
+    }
 }
